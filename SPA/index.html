@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <title>Password Generator</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Password Generator</h1>
+    <div class="inputBox">
+      <input type="text" class="passBox" id="passBox" disabled />
+      <span class="material-icons" id="copyIcon">content_copy</span>
+    </div>
+    <div class="row">
+      <input type="range" min="1" max="30" value="8" id="inputSlider" />
+      <p>Password Length: <span id="sliderValue"></span></p>
+    </div>
+    <div class="row">
+      <label for="pattern">Password Pattern (A, a, #, n):</label>
+      <input type="text" id="pattern" placeholder="Example: Aan#" />
+    </div>
+    <button type="button" class="genPatternBtn" id="genPatternBtn">Generate with Pattern</button>
+    <button type="button" class="genBtn" id="genBtn">Generate Random Password</button>
+    <button type="button" class="exportBtn" id="exportBtn">Export to File</button>
+    <div class="recent-passwords">
+      <h2>Recently Generated Passwords</h2>
+      <ul id="recentPasswordsList"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

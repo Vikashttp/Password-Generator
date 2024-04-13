@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right bottom, #ff5f6d, #ffc371);
+    color: #fff;
+    font-weight: 600;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    min-height: 90vh;
+    border: 0.5px solid #fff;
+    border-radius: 10px;
+    padding: 28px 32px;
+    display: flex;
+    flex-direction: column;
+    background: transparent url('D:\\Vikash\\SPA\\Background\\giphy.gif') no-repeat center center;
+    background-size: cover;
+    box-shadow: 8px 8px 4px #909090, 8px 8px 0px #575757;
+    animation: slideIn 0.5s ease-out;
+    overflow: hidden;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.inputBox {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.inputBox span {
+    position: absolute;
+    top: 16px;
+    right: 6px;
+    color: #000;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.passBox {
+    background-color: #fff;
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 20px;
+    margin-block: 8px;
+    text-overflow: ellipsis;
+}
+
+.row {
+    display: flex;
+    margin-block: 8px;
+    align-items: center;
+}
+
+.row p, .row label {
+    flex-basis: 100%;
+    font-size: 18px;
+}
+
+.row input[type="checkbox"], .row input[type="text"], .row input[type="range"] {
+    width: auto;
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.genBtn, .genPatternBtn, .exportBtn {
+    border: none;
+    outline: none;
+    background-color: #4ecdc4;
+    padding: 12px 24px;
+    color: #fff;
+    font-size: 18px;
+    margin-block: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.genBtn:hover, .genPatternBtn:hover, .exportBtn:hover {
+    background-color: #ff6b6b;
+}
+
+.recent-passwords {
+    margin-top: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    overflow-y: auto;
+    max-height: 150px;
+}
+
+.recent-passwords h2 {
+    font-size: 18px;
+    color: #fff;
+}
+
+.recent-passwords ul {
+    list-style: none;
+}
+
+.recent-passwords li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    color: #333;
+    margin: 4px 0;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.recent-passwords button {
+    padding: 4px 8px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #4ecdc4;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.recent-passwords button:hover {
+    background-color: #3da8a3;
+}
