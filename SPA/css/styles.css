@@ -28,7 +28,7 @@ body {
     padding: 28px 32px;
     display: flex;
     flex-direction: column;
-    background: transparent url('D:\\Vikash\\SPA\\Background\\giphy.gif') no-repeat center center;
+    background: transparent url('../Background/giphy.gif') no-repeat center center;
     background-size: cover;
     box-shadow: 8px 8px 4px #909090, 8px 8px 0px #575757;
     animation: slideIn 0.5s ease-out;
