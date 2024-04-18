@@ -50,7 +50,7 @@ function generateCharacter(charType) {
         case 'a': return randomChar("abcdefghijklmnopqrstuvwxyz");
         case '#': return randomChar("!@#$%^&*()-_+=|<>?{}[]~");
         case 'n': return randomChar("0123456789");
-        default:  return charType; // Allow literals in patterns
+        default:  return charType;
     }
 }
 
@@ -75,6 +75,10 @@ function updateRecentPasswords(password) {
         recentPasswords.shift();
     }
     recentPasswords.push(password);
+    updateRecentPasswordsList();
+}
+
+function updateRecentPasswordsList() {
     const recentList = document.getElementById('recentPasswordsList');
     recentList.innerHTML = '';
     recentPasswords.forEach(pass => {
@@ -96,10 +100,13 @@ function updateRecentPasswords(password) {
 }
 
 exportBtn.addEventListener('click', () => {
-    const data = new Blob([recentPasswords.join('\n')], {type: 'text/plain'});
+    const passwordsData = recentPasswords.map(password => {
+        return { "password": password, "generatedOn": new Date().toISOString() };
+    });
+    const data = new Blob([JSON.stringify({ "passwords": passwordsData }, null, 2)], {type: 'application/json'});
     const url = window.URL.createObjectURL(data);
     const link = document.createElement('a');
     link.href = url;
-    link.download = 'passwords.txt';
+    link.download = 'passwords.json';
     link.click();
 });

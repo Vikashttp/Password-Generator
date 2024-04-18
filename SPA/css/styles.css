@@ -4,12 +4,10 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
 html, body {
     height: 100%;
     overflow: hidden;
 }
-
 body {
     display: flex;
     justify-content: center;
@@ -18,7 +16,6 @@ body {
     color: #fff;
     font-weight: 600;
 }
-
 .container {
     width: 100%;
     max-width: 600px;
@@ -34,23 +31,14 @@ body {
     animation: slideIn 0.5s ease-out;
     overflow: hidden;
 }
-
 @keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
 }
-
 .inputBox {
     position: relative;
     margin-bottom: 10px;
 }
-
 .inputBox span {
     position: absolute;
     top: 16px;
@@ -60,7 +48,6 @@ body {
     cursor: pointer;
     z-index: 2;
 }
-
 .passBox {
     background-color: #fff;
     border: none;
@@ -72,24 +59,20 @@ body {
     margin-block: 8px;
     text-overflow: ellipsis;
 }
-
 .row {
     display: flex;
     margin-block: 8px;
     align-items: center;
 }
-
 .row p, .row label {
     flex-basis: 100%;
     font-size: 18px;
 }
-
 .row input[type="checkbox"], .row input[type="text"], .row input[type="range"] {
     width: auto;
     flex-grow: 1;
     margin-left: 10px;
 }
-
 .genBtn, .genPatternBtn, .exportBtn {
     border: none;
     outline: none;
@@ -102,11 +85,9 @@ body {
     cursor: pointer;
     border-radius: 4px;
 }
-
 .genBtn:hover, .genPatternBtn:hover, .exportBtn:hover {
     background-color: #ff6b6b;
 }
-
 .recent-passwords {
     margin-top: 16px;
     background: rgba(255, 255, 255, 0.2);
@@ -115,16 +96,13 @@ body {
     overflow-y: auto;
     max-height: 150px;
 }
-
 .recent-passwords h2 {
     font-size: 18px;
     color: #fff;
 }
-
 .recent-passwords ul {
     list-style: none;
 }
-
 .recent-passwords li {
     display: flex;
     justify-content: space-between;
@@ -136,7 +114,6 @@ body {
     border-radius: 4px;
     font-size: 16px;
 }
-
 .recent-passwords button {
     padding: 4px 8px;
     font-size: 14px;
@@ -146,7 +123,6 @@ body {
     border-radius: 4px;
     cursor: pointer;
 }
-
 .recent-passwords button:hover {
     background-color: #3da8a3;
 }
