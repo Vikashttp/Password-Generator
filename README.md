@@ -39,5 +39,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 Vikash Krishnan Sureshkumar - vikash.sureshkumar@students.plymouth.ac.uk
+
 Project Link: https://github.com/Vikashttp/Password-Generator.git
 
